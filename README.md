@@ -1,7 +1,7 @@
 # advent-of-code
 Boilerplate for advent-of-code projects.
 
-[![Run on Repl.it](https://repl.it/badge/github/rihdus-sandbox/advent-of-code)](https://repl.it/github/rihdus-sandbox/advent-of-code)
+[![Run on Repl.it](https://repl.it/badge/github/rihdus/advent-of-code)](https://repl.it/github/rihdus/advent-of-code)
 
 Fork it and start coding
 
