@@ -12,15 +12,21 @@ while(travellingWindowindex < arr.length) {
   let nextIndex = travellingWindowindex + 1
 
   for(;nextIndex<arrSize; nextIndex++) {
-
+    let nextNextIndex = nextIndex + 1
+    for(;nextNextIndex<arrSize; nextNextIndex++) {
+      if( arr[travellingWindowindex] + arr[nextIndex] + arr[nextNextIndex] == 2020) {
+        sum2020.push([travellingWindowindex, nextIndex, nextNextIndex])
+        break;
+      }
+    }
     if( arr[travellingWindowindex] + arr[nextIndex] == 2020) {
       sum2020.push([travellingWindowindex, nextIndex])
       break;
     }
   }
-  if( sum2020.length > 0 ) {
-    console.log(arr[sum2020[0][0]] * arr[sum2020[0][1]]);
-    break;
-  }
   travellingWindowindex += 1;
 }
+
+sum2020.forEach((sum) => {
+  console.log(sum.map(i => arr[i]), sum.reduce((mul, v) => mul*=arr[v], 1))
+})
